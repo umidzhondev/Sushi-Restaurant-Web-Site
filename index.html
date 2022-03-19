@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sushi Restaurant Web Site</title>
+    <!--* CSS FILES  -->
+    <link rel="stylesheet" href="./css/main.css">
+    <!--* CSS FILES END  -->
+    <!--* FONTAWESOME LINK -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--* FONTAWESOME LINK END -->
+</head>
+
+<body>
+
+    <!--* HEADER SECTION -->
+    <section class="header">
+        <div class="container">
+            <div class="navbar">
+                <a href="#" class="navbar__logo">
+                    <img src="./image/header/logo.png" alt="imagee...">
+                </a>
+                <i class="fa-solid fa-bars-staggered navbar__open--icon"></i>
+                <div class="navbar__main">
+                    <i class="fa-solid fa-chevron-left navbar__close--icon"></i>
+                    <ul class="nav">
+                        <li class="nav__item"><a href="#" class="nav__link nav__link--active">Home</a></li>
+                        <li class="nav__item"><a href="#work" class="nav__link">How to Work</a></li>
+                        <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
+                        <li class="nav__item"><a href="#product" class="nav__link">Product</a></li>
+                        <li class="nav__item"><a href="#footer" class="nav__link">Contact</a></li>
+                    </ul>
+                    <a href="#subscribe" class="button button__navbar">Register</a>
+                </div>
+            </div>
+            <div class="main">
+                <div class="main__body">
+                    <div class="main__info">
+                        <h1 class="main__title">
+                            You Can Eat
+                            Any Tasty
+                            Food You Like.
+                        </h1>
+                        <p class="main__description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                            laboris.
+                        </p>
+                        <a href="#" class="button button__main main__button">
+                            Get Started
+                            <span class="button__main-icon">
+                                <svg width="8" height="12" viewBox="0 0 8 12" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4.66688 6L0 1.33312L1.33312 0L7.33312 6L1.33312 12L0 10.6669L4.66688 6Z"
+                                        fill="#F16214" />
+                                </svg>
+                            </span>
+                        </a>
+                        <div class="main__social-icons">
+                            <a href="#" class="main__social-icon">
+                                <i class="fa-brands fa-facebook-f"></i>
+                                <span class="main__social-icon__shape">Facebook</span>
+                            </a>
+                            <a href="#" class="main__social-icon">
+                                <i class="fa-brands fa-instagram"></i>
+                                <span class="main__social-icon__shape">Instagram</span>
+                            </a>
+                            <a href="#" class="main__social-icon">
+                                <i class="fa-brands fa-twitter"></i>
+                                <span class="main__social-icon__shape">Twitter</span>
+                            </a>
+                            <a href="#" class="main__social-icon">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                                <span class="main__social-icon__shape">Linkedin</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="main__imgbox">
+                        <img src="./image/home/main-image.png" alt="image...">
+                    </div>
+                </div>
+                <div class="main__footer">
+                    <div class="main__footer-cards">
+                        <div class="main__footer-card">
+                            <div class="main__footer-card__icon">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M8 16C3.5816 16 0 12.4184 0 8C0 3.5816 3.5816 0 8 0C12.4184 0 16 3.5816 16 8C16 12.4184 12.4184 16 8 16ZM8 14.4C9.69739 14.4 11.3253 13.7257 12.5255 12.5255C13.7257 11.3253 14.4 9.69739 14.4 8C14.4 6.30261 13.7257 4.67475 12.5255 3.47452C11.3253 2.27428 9.69739 1.6 8 1.6C6.30261 1.6 4.67475 2.27428 3.47452 3.47452C2.27428 4.67475 1.6 6.30261 1.6 8C1.6 9.69739 2.27428 11.3253 3.47452 12.5255C4.67475 13.7257 6.30261 14.4 8 14.4ZM8.8 8H12V9.6H7.2V4H8.8V8Z"
+                                        fill="white" />
+                                </svg>
+                            </div>
+                            <h4 class="main__footer-card__title">Today 10:00am - 09:00pm</h4>
+                            <span class="main__footer-card__subtitle">Working Time</span>
+                        </div>
+                        <div class="main__footer-card">
+                            <div class="main__footer-card__icon">
+                                <svg width="14" height="16" viewBox="0 0 14 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M6.62742 16L1.9411 11.3137C1.01425 10.3868 0.383055 9.20592 0.127341 7.92033C-0.128373 6.63474 0.00287692 5.30219 0.504493 4.0912C1.00611 2.8802 1.85556 1.84514 2.94543 1.11692C4.0353 0.388689 5.31664 0 6.62742 0C7.9382 0 9.21953 0.388689 10.3094 1.11692C11.3993 1.84514 12.2487 2.8802 12.7503 4.0912C13.252 5.30219 13.3832 6.63474 13.1275 7.92033C12.8718 9.20592 12.2406 10.3868 11.3137 11.3137L6.62742 16ZM10.2725 10.2724C10.9933 9.55153 11.4842 8.63305 11.6831 7.63316C11.8819 6.63327 11.7798 5.59687 11.3897 4.65501C10.9995 3.71315 10.3388 2.90813 9.49114 2.34175C8.64347 1.77538 7.64689 1.47307 6.62742 1.47307C5.60795 1.47307 4.61137 1.77538 3.7637 2.34175C2.91603 2.90813 2.25535 3.71315 1.86519 4.65501C1.47503 5.59687 1.37292 6.63327 1.57177 7.63316C1.77062 8.63305 2.2615 9.55153 2.98234 10.2724L6.62742 13.9175L10.2725 10.2724ZM6.62742 8.10012C6.23682 8.10012 5.86222 7.94495 5.58602 7.66876C5.30983 7.39256 5.15466 7.01796 5.15466 6.62736C5.15466 6.23676 5.30983 5.86216 5.58602 5.58596C5.86222 5.30977 6.23682 5.1546 6.62742 5.1546C7.01802 5.1546 7.39262 5.30977 7.66882 5.58596C7.94501 5.86216 8.10018 6.23676 8.10018 6.62736C8.10018 7.01796 7.94501 7.39256 7.66882 7.66876C7.39262 7.94495 7.01802 8.10012 6.62742 8.10012Z"
+                                        fill="white" />
+                                </svg>
+
+                            </div>
+                            <h4 class="main__footer-card__title">Washington, D.C., DC, USA</h4>
+                            <span class="main__footer-card__subtitle">Our location</span>
+                        </div>
+                        <div class="main__footer-card">
+                            <div class="main__footer-card__icon">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M5.65867 6.82844C6.49274 8.29376 7.70624 9.50726 9.17156 10.3413L9.95733 9.24089C10.0837 9.06394 10.2705 8.93945 10.4825 8.89096C10.6945 8.84248 10.9168 8.87336 11.1076 8.97778C12.3647 9.66482 13.7531 10.078 15.1813 10.1902C15.4042 10.2079 15.6123 10.3089 15.764 10.4732C15.9158 10.6374 16 10.8528 16 11.0764V15.0427C16 15.2628 15.9184 15.475 15.771 15.6384C15.6235 15.8018 15.4207 15.9047 15.2018 15.9271C14.7307 15.976 14.256 16 13.7778 16C6.16889 16 0 9.83111 0 2.22222C0 1.744 0.024 1.26933 0.0728889 0.798222C0.0953374 0.579286 0.198208 0.376463 0.361591 0.229008C0.524974 0.0815531 0.73725 -4.74291e-05 0.957333 2.0682e-08H4.92356C5.14717 -2.80165e-05 5.36257 0.0842236 5.52683 0.235956C5.69108 0.387689 5.79211 0.595754 5.80978 0.818667C5.92198 2.24693 6.33518 3.63527 7.02222 4.89244C7.12664 5.08317 7.15752 5.30555 7.10904 5.51751C7.06055 5.72947 6.93606 5.9163 6.75911 6.04267L5.65867 6.82844ZM3.41689 6.24444L5.10578 5.03822C4.62647 4.00364 4.29809 2.90564 4.13067 1.77778H1.78667C1.78133 1.92533 1.77867 2.07378 1.77867 2.22222C1.77778 8.84978 7.15022 14.2222 13.7778 14.2222C13.9262 14.2222 14.0747 14.2196 14.2222 14.2133V11.8693C13.0944 11.7019 11.9964 11.3735 10.9618 10.8942L9.75556 12.5831C9.26992 12.3944 8.79823 12.1716 8.344 11.9164L8.29245 11.8871C6.54896 10.8949 5.10514 9.45104 4.11289 7.70756L4.08356 7.656C3.82836 7.20177 3.60559 6.73008 3.41689 6.24444Z"
+                                        fill="white" />
+                                </svg>
+                            </div>
+                            <h4 class="main__footer-card__title">+17602781253</h4>
+                            <span class="main__footer-card__subtitle">Call Online</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!--* HEADER SECTION END -->
+
+    <!--* WORK SECTION -->
+    <section class="work" id="work">
+        <div class="container">
+            <div class="work__content">
+                <div class="work__imgbox">
+                    <img src="./image/work/work-main.png" alt="image...">
+                </div>
+                <div class="work__info">
+                    <span class="work__suptitle">How to work</span>
+                    <h2 class="work__title">
+                        Food Is An Important Part Of
+                        A Balanced Diet.
+                    </h2>
+                    <p class="work__description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                        voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                    <a href="#" class="button button__main work__button">
+                        Get Started
+                        <span class="button__main-icon">
+                            <svg width="8" height="12" viewBox="0 0 8 12" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.66688 6L0 1.33312L1.33312 0L7.33312 6L1.33312 12L0 10.6669L4.66688 6Z"
+                                    fill="#F16214" />
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--* WORK SECTION END -->
+
+    <!--* SERVICES SECTION -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="services__content">
+                <span class="services__suptitle">Services</span>
+                <h2 class="services__title">Why Choose Our Favorite Food</h2>
+                <div class="services__cards">
+                    <div class="services__card">
+                        <div class="services__card-imgbox">
+                            <svg width="31" height="30" viewBox="0 0 31 30" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M1.98102 0.124435L13.3333 11.4767L8.55375 16.2579L1.97933 9.68353C0.711966 8.41578 0 6.69658 0 4.90398C0 3.11139 0.711966 1.39218 1.97933 0.124435H1.98102ZM18.9596 14.2163L17.5162 15.6597L29.4668 27.6102L27.077 30L15.1265 18.0511L3.17591 30L0.786134 27.6102L16.5698 11.8266C15.576 9.36411 16.6036 5.81832 19.3077 3.11081C22.6085 -0.188231 27.1565 -0.991019 29.4668 1.31932C31.7772 3.62966 30.9744 8.17767 27.6753 11.4767C24.9678 14.1842 21.422 15.2118 18.9596 14.2163Z"
+                                    fill="#F16214" />
+                            </svg>
+
+                        </div>
+                        <h3 class="services__card-title">Qualityfull Food</h3>
+                        <p class="services__card-description">
+                            But I must explain to you how all this
+                            mistaken idea of denouncing pleasure and praising pain was born.
+                        </p>
+                    </div>
+                    <div class="services__card">
+                        <div class="services__card-imgbox">
+                            <svg width="27" height="30" viewBox="0 0 27 30" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M27 0V30H24V18H19.5V7.5C19.5 5.51088 20.2902 3.60322 21.6967 2.1967C23.1032 0.790176 25.0109 0 27 0ZM9 17.85V30H6V17.85C4.30621 17.5037 2.78399 16.5831 1.69072 15.2438C0.597446 13.9045 0.000211598 12.2288 0 10.5V1.5H3V12H6V1.5H9V12H12V1.5H15V10.5C14.9998 12.2288 14.4026 13.9045 13.3093 15.2438C12.216 16.5831 10.6938 17.5037 9 17.85Z"
+                                    fill="#F16214" />
+                            </svg>
+
+
+                        </div>
+                        <h3 class="services__card-title">Healthy Food</h3>
+                        <p class="services__card-description">
+                            But I must explain to you how all this
+                            mistaken idea of denouncing pleasure and praising pain was born.
+                        </p>
+                    </div>
+                    <div class="services__card">
+                        <div class="services__card-imgbox">
+                            <svg width="42" height="30" viewBox="0 0 42 30" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M14.9285 24.3655C14.7057 25.9291 13.9262 27.3599 12.7332 28.395C11.5401 29.4301 10.0137 30 8.4342 30C6.85472 30 5.32827 29.4301 4.13523 28.395C2.94219 27.3599 2.16268 25.9291 1.93987 24.3655H0V1.87427C0 1.37718 0.197467 0.900453 0.54896 0.54896C0.900453 0.197467 1.37718 0 1.87427 0H28.114C28.6111 0 29.0878 0.197467 29.4393 0.54896C29.7908 0.900453 29.9883 1.37718 29.9883 1.87427V5.6228H35.6111L41.2339 13.2248V24.3655H37.4197C37.1969 25.9291 36.4174 27.3599 35.2244 28.395C34.0313 29.4301 32.5049 30 30.9254 30C29.3459 30 27.8195 29.4301 26.6264 28.395C25.4334 27.3599 24.6539 25.9291 24.4311 24.3655H14.9285ZM26.2397 3.74853H3.74853V18.8364C4.48805 18.0814 5.39901 17.5163 6.4039 17.1891C7.40879 16.8619 8.47786 16.7824 9.5201 16.9572C10.5624 17.1321 11.5469 17.5561 12.39 18.1933C13.2332 18.8305 13.9098 19.662 14.3625 20.6169H24.9971C25.312 19.9553 25.7337 19.3537 26.2397 18.8364V3.74853ZM29.9883 14.9941H37.4853V14.46L33.7218 9.37133H29.9883V14.9941ZM30.9254 26.2397C31.6713 26.2397 32.3866 25.9434 32.914 25.416C33.4414 24.8886 33.7377 24.1733 33.7377 23.4274C33.7377 22.6815 33.4414 21.9662 32.914 21.4388C32.3866 20.9114 31.6713 20.6151 30.9254 20.6151C30.1795 20.6151 29.4642 20.9114 28.9368 21.4388C28.4094 21.9662 28.1131 22.6815 28.1131 23.4274C28.1131 24.1733 28.4094 24.8886 28.9368 25.416C29.4642 25.9434 30.1795 26.2397 30.9254 26.2397ZM11.2456 23.4283C11.2456 23.0591 11.1729 22.6935 11.0316 22.3525C10.8903 22.0114 10.6832 21.7014 10.4222 21.4404C10.1611 21.1793 9.85117 20.9722 9.51007 20.8309C9.16898 20.6896 8.8034 20.6169 8.4342 20.6169C8.065 20.6169 7.69942 20.6896 7.35832 20.8309C7.01723 20.9722 6.7073 21.1793 6.44624 21.4404C6.18518 21.7014 5.97809 22.0114 5.8368 22.3525C5.69552 22.6935 5.6228 23.0591 5.6228 23.4283C5.6228 24.174 5.919 24.889 6.44624 25.4163C6.97348 25.9435 7.68857 26.2397 8.4342 26.2397C9.17983 26.2397 9.89492 25.9435 10.4222 25.4163C10.9494 24.889 11.2456 24.174 11.2456 23.4283Z"
+                                    fill="#F16214" />
+                            </svg>
+
+
+                        </div>
+                        <h3 class="services__card-title">Fast Delivery</h3>
+                        <p class="services__card-description">
+                            But I must explain to you how all this
+                            mistaken idea of denouncing pleasure and praising pain was born.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--* SERVICES SECTION END -->
+
+    <!--* PRODUCT SECTION -->
+    <section class="product" id="product">
+        <div class="container">
+            <div class="product__content">
+                <span class="product__suptitle">Product</span>
+                <h2 class="product__title">Most Popular Items</h2>
+                <div class="product__cards">
+                    <div class="product__card">
+                        <div class="product__card-imgbox">
+                            <img src="./image/product/product-1.png" alt="image...">
+                        </div>
+                        <div class="product__card-body">
+                            <div class="product__card-left">
+                                <h3 class="product__card-title">Gyro Sandwhich</h3>
+                                <button class="product__card-button button button__product">Add To Card</button>
+                            </div>
+                            <div class="product__card-right">
+                                <div class="product__card-rating">
+                                    <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M6.84896 10.7273C6.54548 10.5574 6.17554 10.5574 5.87207 10.7273L3.70357 11.9411C2.95897 12.3579 2.06802 11.7106 2.23429 10.8736L2.71855 8.43608C2.78632 8.09496 2.67198 7.74313 2.41663 7.50701L0.591805 5.81962C-0.0347269 5.24028 0.305551 4.19287 1.15295 4.09237L3.62099 3.79966C3.96633 3.7587 4.26558 3.54128 4.41125 3.2255L5.45247 0.968401C5.8099 0.193581 6.91112 0.193582 7.26855 0.968401L8.30977 3.2255C8.45544 3.54128 8.7547 3.7587 9.10003 3.79966L11.5681 4.09237C12.4155 4.19287 12.7558 5.24028 12.1292 5.81962L10.3044 7.50701C10.049 7.74313 9.93471 8.09496 10.0025 8.43608L10.4867 10.8736C10.653 11.7106 9.76205 12.3579 9.01745 11.9411L6.84896 10.7273Z"
+                                            fill="#F16214" />
+                                    </svg>
+                                    <span>4.7</span>
+                                </div>
+                                <h3 class="product__card-price">$350</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__card">
+                        <div class="product__card-imgbox">
+                            <img src="./image/product/product-2.png" alt="image...">
+                        </div>
+                        <div class="product__card-body">
+                            <div class="product__card-left">
+                                <h3 class="product__card-title">Enchilada</h3>
+                                <button class="product__card-button button button__product">Add To Card</button>
+                            </div>
+                            <div class="product__card-right">
+                                <div class="product__card-rating">
+                                    <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M6.84896 10.7273C6.54548 10.5574 6.17554 10.5574 5.87207 10.7273L3.70357 11.9411C2.95897 12.3579 2.06802 11.7106 2.23429 10.8736L2.71855 8.43608C2.78632 8.09496 2.67198 7.74313 2.41663 7.50701L0.591805 5.81962C-0.0347269 5.24028 0.305551 4.19287 1.15295 4.09237L3.62099 3.79966C3.96633 3.7587 4.26558 3.54128 4.41125 3.2255L5.45247 0.968401C5.8099 0.193581 6.91112 0.193582 7.26855 0.968401L8.30977 3.2255C8.45544 3.54128 8.7547 3.7587 9.10003 3.79966L11.5681 4.09237C12.4155 4.19287 12.7558 5.24028 12.1292 5.81962L10.3044 7.50701C10.049 7.74313 9.93471 8.09496 10.0025 8.43608L10.4867 10.8736C10.653 11.7106 9.76205 12.3579 9.01745 11.9411L6.84896 10.7273Z"
+                                            fill="#F16214" />
+                                    </svg>
+                                    <span>4.7</span>
+                                </div>
+                                <h3 class="product__card-price">$390</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__card">
+                        <div class="product__card-imgbox">
+                            <img src="./image/product/product-3.png" alt="image...">
+                        </div>
+                        <div class="product__card-body">
+                            <div class="product__card-left">
+                                <h3 class="product__card-title">Green Beans</h3>
+                                <button class="product__card-button button button__product">Add To Card</button>
+                            </div>
+                            <div class="product__card-right">
+                                <div class="product__card-rating">
+                                    <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M6.84896 10.7273C6.54548 10.5574 6.17554 10.5574 5.87207 10.7273L3.70357 11.9411C2.95897 12.3579 2.06802 11.7106 2.23429 10.8736L2.71855 8.43608C2.78632 8.09496 2.67198 7.74313 2.41663 7.50701L0.591805 5.81962C-0.0347269 5.24028 0.305551 4.19287 1.15295 4.09237L3.62099 3.79966C3.96633 3.7587 4.26558 3.54128 4.41125 3.2255L5.45247 0.968401C5.8099 0.193581 6.91112 0.193582 7.26855 0.968401L8.30977 3.2255C8.45544 3.54128 8.7547 3.7587 9.10003 3.79966L11.5681 4.09237C12.4155 4.19287 12.7558 5.24028 12.1292 5.81962L10.3044 7.50701C10.049 7.74313 9.93471 8.09496 10.0025 8.43608L10.4867 10.8736C10.653 11.7106 9.76205 12.3579 9.01745 11.9411L6.84896 10.7273Z"
+                                            fill="#F16214" />
+                                    </svg>
+                                    <span>4.9</span>
+                                </div>
+                                <h3 class="product__card-price">$230</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__card">
+                        <div class="product__card-imgbox">
+                            <img src="./image/product/product-4.png" alt="image...">
+                        </div>
+                        <div class="product__card-body">
+                            <div class="product__card-left">
+                                <h3 class="product__card-title">Pizza</h3>
+                                <button class="product__card-button button button__product">Add To Card</button>
+                            </div>
+                            <div class="product__card-right">
+                                <div class="product__card-rating">
+                                    <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M6.84896 10.7273C6.54548 10.5574 6.17554 10.5574 5.87207 10.7273L3.70357 11.9411C2.95897 12.3579 2.06802 11.7106 2.23429 10.8736L2.71855 8.43608C2.78632 8.09496 2.67198 7.74313 2.41663 7.50701L0.591805 5.81962C-0.0347269 5.24028 0.305551 4.19287 1.15295 4.09237L3.62099 3.79966C3.96633 3.7587 4.26558 3.54128 4.41125 3.2255L5.45247 0.968401C5.8099 0.193581 6.91112 0.193582 7.26855 0.968401L8.30977 3.2255C8.45544 3.54128 8.7547 3.7587 9.10003 3.79966L11.5681 4.09237C12.4155 4.19287 12.7558 5.24028 12.1292 5.81962L10.3044 7.50701C10.049 7.74313 9.93471 8.09496 10.0025 8.43608L10.4867 10.8736C10.653 11.7106 9.76205 12.3579 9.01745 11.9411L6.84896 10.7273Z"
+                                            fill="#F16214" />
+                                    </svg>
+                                    <span>4.9</span>
+                                </div>
+                                <h3 class="product__card-price">$150</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__card">
+                        <div class="product__card-imgbox">
+                            <img src="./image/product/product-5.png" alt="image...">
+                        </div>
+                        <div class="product__card-body">
+                            <div class="product__card-left">
+                                <h3 class="product__card-title">Chicken Pot Pie</h3>
+                                <button class="product__card-button button button__product">Add To Card</button>
+                            </div>
+                            <div class="product__card-right">
+                                <div class="product__card-rating">
+                                    <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M6.84896 10.7273C6.54548 10.5574 6.17554 10.5574 5.87207 10.7273L3.70357 11.9411C2.95897 12.3579 2.06802 11.7106 2.23429 10.8736L2.71855 8.43608C2.78632 8.09496 2.67198 7.74313 2.41663 7.50701L0.591805 5.81962C-0.0347269 5.24028 0.305551 4.19287 1.15295 4.09237L3.62099 3.79966C3.96633 3.7587 4.26558 3.54128 4.41125 3.2255L5.45247 0.968401C5.8099 0.193581 6.91112 0.193582 7.26855 0.968401L8.30977 3.2255C8.45544 3.54128 8.7547 3.7587 9.10003 3.79966L11.5681 4.09237C12.4155 4.19287 12.7558 5.24028 12.1292 5.81962L10.3044 7.50701C10.049 7.74313 9.93471 8.09496 10.0025 8.43608L10.4867 10.8736C10.653 11.7106 9.76205 12.3579 9.01745 11.9411L6.84896 10.7273Z"
+                                            fill="#F16214" />
+                                    </svg>
+                                    <span>4.7</span>
+                                </div>
+                                <h3 class="product__card-price">$260</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product__card">
+                        <div class="product__card-imgbox">
+                            <img src="./image/product/product-6.png" alt="image...">
+                        </div>
+                        <div class="product__card-body">
+                            <div class="product__card-left">
+                                <h3 class="product__card-title">Green Salad</h3>
+                                <button class="product__card-button button button__product">Add To Card</button>
+                            </div>
+                            <div class="product__card-right">
+                                <div class="product__card-rating">
+                                    <svg width="13" height="13" viewBox="0 0 13 13" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M6.84896 10.7273C6.54548 10.5574 6.17554 10.5574 5.87207 10.7273L3.70357 11.9411C2.95897 12.3579 2.06802 11.7106 2.23429 10.8736L2.71855 8.43608C2.78632 8.09496 2.67198 7.74313 2.41663 7.50701L0.591805 5.81962C-0.0347269 5.24028 0.305551 4.19287 1.15295 4.09237L3.62099 3.79966C3.96633 3.7587 4.26558 3.54128 4.41125 3.2255L5.45247 0.968401C5.8099 0.193581 6.91112 0.193582 7.26855 0.968401L8.30977 3.2255C8.45544 3.54128 8.7547 3.7587 9.10003 3.79966L11.5681 4.09237C12.4155 4.19287 12.7558 5.24028 12.1292 5.81962L10.3044 7.50701C10.049 7.74313 9.93471 8.09496 10.0025 8.43608L10.4867 10.8736C10.653 11.7106 9.76205 12.3579 9.01745 11.9411L6.84896 10.7273Z"
+                                            fill="#F16214" />
+                                    </svg>
+                                    <span>4.9</span>
+                                </div>
+                                <h3 class="product__card-price">$100</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#" class="button button__main work__button">
+                    See More Product
+                    <span class="button__main-icon">
+                        <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.66688 6L0 1.33312L1.33312 0L7.33312 6L1.33312 12L0 10.6669L4.66688 6Z"
+                                fill="#F16214" />
+                        </svg>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!--* PRODUCT SECTION END -->
+
+    <!--* DOWNLOAD SECTION -->
+    <section class="download" id="download">
+        <div class="container">
+            <div class="download__content">
+                <div class="download__box">
+                    <div class="download__info">
+                        <h2 class="download__title">Simple Way To Order Your Foods</h2>
+                        <div class="download__apps">
+                            <div class="download__app">
+                                <img src="./image/download/playmarket-icon.svg" alt="image...">
+                                <div class="download__app-text">
+                                    <span>GET IN ON</span>
+                                    <h3>Google Play</h3>
+                                </div>
+                            </div>
+                            <div class="download__app">
+                                <img src="./image/download/apple-icon.svg" alt="image...">
+                                <div class="download__app-text">
+                                    <span>Download on the</span>
+                                    <h3>Apple Store</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="download__imgboxs">
+                        <div class="download__imgbox">
+                            <img src="./image/download/page-1.png" alt="image...">
+                        </div>
+                        <div class="download__imgbox">
+                            <img src="./image/download/page-2.png" class="download__page-2" alt="image...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--* DOWNLOAD SECTION END -->
+
+    <!--* REVIEW SECTION -->
+    <section class="review" id="review">
+        <div class="container">
+            <div class="review__content">
+                <span class="review__suptitle">Testimonials</span>
+                <h2 class="review__title">Our Happy Client Says</h2>
+                <div class="review__main">
+                    <div class="review__main-info">
+                        <div class="review__main-info__body">
+                            <div class="review__main-info__imgbox">
+                                <img src="./image/review/review-user.png" alt="image...">
+                                <div class="review__main-info__imgbox-text">
+                                    <h3>Williams Johon</h3>
+                                    <span>CEO & Co-Founder</span>
+                                </div>
+                            </div>
+                            <p class="review__main-info__description">
+                                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                incididunt
+                                ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                consequat. Duis aute irure dolor."
+                            </p>
+                        </div>
+                        <div class="review__main-info__footer">
+                            <div id="review__next" class="review__main-info__footer-icon">
+                                <svg width="23" height="11" viewBox="0 0 23 11" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M17.5 10.0158C17.3684 10.0166 17.2379 9.99133 17.1161 9.94157C16.9943 9.89181 16.8834 9.81848 16.79 9.7258C16.6963 9.63283 16.6219 9.52223 16.5711 9.40038C16.5203 9.27852 16.4942 9.14781 16.4942 9.0158C16.4942 8.88379 16.5203 8.75308 16.5711 8.63122C16.6219 8.50936 16.6963 8.39876 16.79 8.3058L20.1 5.0158L16.92 1.7058C16.7337 1.51844 16.6292 1.26498 16.6292 1.0008C16.6292 0.736612 16.7337 0.483161 16.92 0.295798C17.013 0.20207 17.1236 0.127675 17.2454 0.0769067C17.3673 0.026138 17.498 0 17.63 0C17.762 0 17.8927 0.026138 18.0146 0.0769067C18.1364 0.127675 18.247 0.20207 18.34 0.295798L22.2 4.2958C22.3832 4.48273 22.4859 4.73405 22.4859 4.9958C22.4859 5.25755 22.3832 5.50887 22.2 5.6958L18.2 9.6958C18.1102 9.79273 18.0022 9.87092 17.882 9.92584C17.7619 9.98077 17.632 10.0113 17.5 10.0158Z"
+                                        fill="#F16214" />
+                                    <line x1="20" y1="5.01562" x2="1" y2="5.01562" stroke="#F16214" stroke-width="2"
+                                        stroke-linecap="round" />
+                                </svg>
+                            </div>
+                            <div id="review__prev" class="review__main-info__footer-icon">
+                                <svg width="23" height="11" viewBox="0 0 23 11" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M5.49994 0.984204C5.63155 0.983443 5.76201 1.00867 5.88385 1.05843C6.00568 1.1082 6.1165 1.18152 6.20994 1.2742C6.30367 1.36717 6.37806 1.47777 6.42883 1.59963C6.4796 1.72149 6.50574 1.85219 6.50574 1.9842C6.50574 2.11621 6.4796 2.24692 6.42883 2.36878C6.37806 2.49064 6.30367 2.60124 6.20994 2.6942L2.89994 5.9842L6.07994 9.2942C6.26619 9.48157 6.37073 9.73502 6.37073 9.9992C6.37073 10.2634 6.26619 10.5168 6.07994 10.7042C5.98698 10.7979 5.87638 10.8723 5.75452 10.9231C5.63266 10.9739 5.50195 11 5.36994 11C5.23793 11 5.10722 10.9739 4.98536 10.9231C4.8635 10.8723 4.7529 10.7979 4.65994 10.7042L0.799941 6.7042C0.616713 6.51727 0.514083 6.26596 0.514083 6.0042C0.514083 5.74245 0.616713 5.49113 0.799941 5.3042L4.79994 1.3042C4.8897 1.20727 4.99777 1.12909 5.11792 1.07416C5.23807 1.01924 5.36791 0.988661 5.49994 0.984204Z"
+                                        fill="white" />
+                                    <line x1="2.99994" y1="5.98438" x2="21.9999" y2="5.98438" stroke="white"
+                                        stroke-width="2" stroke-linecap="round" />
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review__main-imgbox">
+                        <img src="./image/review/review-main-image.png" alt="image...">
+                    </div>
+                </div>
+                <img src="./image/review/review-image.png" alt="image..." class="review__left-image">
+            </div>
+        </div>
+    </section>
+    <!--* REVIEW SECTION END -->
+
+    <!--* SUBSCRIBE SECTION -->
+    <section class="subscribe" id="subscribe">
+        <div class="container">
+            <div class="subscribe__box">
+                <div class="subscribe__imgbox">
+                    <img src="./image/subscribe/subscribe-main-image.png" alt="image..">
+                </div>
+                <div class="subscribe__info">
+                    <h2 class="subscribe__title">Subcribe To Our Newsletter</h2>
+                    <p class="subscribe__description">
+                        Email subsription is an opportunity to recevie an interting newsletter
+                        from a website. once a user fills in the subscription from on a website.
+                    </p>
+                    <form class="subscribe__form">
+                        <input type="text" placeholder="Type your email...">
+                        <button class="subscribe__button button__subscribe">SUBCRIBE</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--* SUBSCRIBE SECTION END -->
+
+    <!--* FOOTER SECTION -->
+    <section class="footer" id="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__main">
+                    <div class="footer__item">
+                        <a href="#" class="footer__logo">
+                            <img src="./image/header/logo.png" alt="image...">
+                        </a>
+                        <p class="footer__description">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+                        </p>
+                        <div class="main__social-icons footer__social-icons">
+                            <a href="#" class="main__social-icon">
+                                <i class="fa-brands fa-facebook-f"></i>
+                                <span class="main__social-icon__shape">Facebook</span>
+                            </a>
+                            <a href="#" class="main__social-icon">
+                                <i class="fa-brands fa-instagram"></i>
+                                <span class="main__social-icon__shape">Instagram</span>
+                            </a>
+                            <a href="#" class="main__social-icon">
+                                <i class="fa-brands fa-twitter"></i>
+                                <span class="main__social-icon__shape">Twitter</span>
+                            </a>
+                            <a href="#" class="main__social-icon">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                                <span class="main__social-icon__shape">Linkedin</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer__item">
+                        <h3 class="footer__title">Opening Restaurant</h3>
+                        <a href="#" class="footer__link">Sa - We: 09:00am - 10:00pm</a>
+                        <a href="#" class="footer__link">Thursday: 09:00am - 05:00pm</a>
+                        <a href="#" class="footer__link">Friday: Closed</a>
+                    </div>
+                    <div class="footer__item">
+                        <h3 class="footer__title">User Link</h3>
+                        <a href="#" class="footer__link">About Us</a>
+                        <a href="#" class="footer__link">Contact Us</a>
+                        <a href="#" class="footer__link">Order Delivery</a>
+                        <a href="#" class="footer__link">Payment & Tax</a>
+                        <a href="#" class="footer__link">Terms of Services</a>
+                    </div>
+                    <div class="footer__item">
+                        <h3 class="footer__title">Contact Us</h3>
+                        <a href="#" class="footer__link">543 Country Club Ave,</a>
+                        <a href="#" class="footer__link">NC 27587, London, UK</a>
+                        <a href="#" class="footer__link">+1259 6541120</a>
+                        <div class="footer__form">
+                            <input type="text" placeholder="Enter your email...">
+                            <button class="footer__button button__footer">
+                                <svg width="7" height="10" viewBox="0 0 7 10" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3.33373 5L0 1.66745L1.66627 0L6.66627 5L1.66627 10L0 8.33255L3.33373 5Z"
+                                        fill="white" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <span class="footer__admin"> Copyrights© 2021 Food Bill All rights reserved.
+                </span>
+            </div>
+        </div>
+    </section>
+    <!--* FOOTER SECTION END -->
+
+
+
+    <!--* JAVASCRIPT FILES -->
+    <script src="./js/index.js"></script>
+    <!--* JAVASCRIPT FILES END -->
+
+</body>
+
+</html>

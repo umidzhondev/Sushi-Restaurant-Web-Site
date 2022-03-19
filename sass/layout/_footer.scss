@@ -1,0 +1,107 @@
+// *  Footer
+
+.footer {
+    width: 100%;
+    background-color: #F5F5F5;
+    padding: 100px 0 30px 0;
+    @include responsive(sm){
+     padding: 60px 0 30px 0;       
+    }
+    @include responsive(xs){
+     padding: 50px 0 30px 0;       
+    }
+
+    &__content {
+        width: 100%;
+        @include flex(center, center, column);
+    }
+
+    &__main {
+        @include flex(space-between, flex-start, row);
+        gap: 30px;
+        margin-bottom: 65px;
+
+        @include responsive(lg) {
+            flex-wrap: wrap;
+            gap: 40px
+        }
+        @include responsive(sm){
+         margin-bottom: 40px;   
+        }
+        @include responsive(xs){
+            flex-direction: column;
+        }
+    }
+
+    &__item {
+        @include flex(center, flex-start, column);
+        flex: 1;
+
+        @include responsive(lg) {
+            flex: 1 1 15%;
+        }
+        @include responsive(md) {
+            flex: 1 1 30%;
+        }
+    }
+
+    &__logo {
+        margin-bottom: 34px;
+        @include responsive(xs){
+         margin-bottom: 20px;   
+        }
+    }
+
+    &__description {
+        @extend .section-description;
+        margin-bottom: 33px;
+        color: $color-grey;
+        @include responsive(xs){
+            margin-bottom: 25px;
+        }
+    }
+
+    &__title {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 150%;
+        color: $color-second;
+        font-family: $font-md;
+        margin-bottom: 36px;
+        @include responsive(sm){
+         margin-bottom: 20px;   
+        }
+        @include responsive(xxs){
+            font-size: 18px;
+        }
+    }
+
+    &__link {
+        @extend .section-description;
+        margin-bottom: 10px;
+        transition: .3s ease;
+        &:hover{
+            color: rgb(0, 153, 255);
+        }
+    }
+
+
+    &__button {
+        position: absolute;
+        right: 5px;
+    }
+
+    &__admin {
+        width: 100%;
+        padding-top: 24px;
+        border-top: 2px solid #DDDDDD;
+        text-align: center;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 170%;
+        font-family: $font-rg;
+        color: $color-grey;
+    }
+}

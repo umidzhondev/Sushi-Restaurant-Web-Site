@@ -1,0 +1,40 @@
+// * Importing Scss Files
+@import "../sass/abstracts/variables";
+@import "../sass/abstracts/mixins";
+@import "../sass/abstracts/extends";
+
+@import "../sass/base/resets";
+@import "../sass/base/typography";
+@import "../sass/base/utilities";
+
+@import "../sass/components/buttons";
+@import "../sass/components/cards";
+@import "../sass/components/forms";
+
+@import "../sass/layout/container";
+@import "../sass/layout/footer";
+@import "../sass/layout/header";
+@import "../sass/layout/navigation";
+
+@import "../sass/pages/home";
+
+// * Fonts 
+@font-face {
+    font-family: ProductSans-Bold;
+    src: url("/font/ProductSans-Bold.ttf");
+}
+
+@font-face {
+    font-family: ProductSans-Medium;
+    src: url("/font/ProductSans-Medium.ttf");
+}
+
+@font-face {
+    font-family: ProductSans-Regular;
+    src: url("/font/ProductSans-Regular.ttf");
+}
+
+@font-face {
+    font-family: ProductSans-Thin;
+    src: url("/font/ProductSans-Thin.ttf");
+}

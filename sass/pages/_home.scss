@@ -1,0 +1,1028 @@
+// * Main 
+.main {
+    width: 100%;
+    @include flex(center, center, column);
+
+    &__body {
+        width: 100%;
+        @include flex(space-between, center, row);
+        margin-bottom: 110px;
+
+        @include responsive(lg) {
+            margin-bottom: 90px;
+        }
+
+        @include responsive(md) {
+            margin-bottom: 30px;
+        }
+
+        @include responsive(sm) {
+            margin-bottom: 70px;
+        }
+
+        @include responsive(xs) {
+            flex-direction: column
+        }
+
+    }
+
+    &__info {
+        @include flex(center, flex-start, column);
+        flex: 1;
+        z-index: 5;
+
+        .main__button {
+            margin-bottom: 40px;
+
+            @include responsive(xs) {
+                margin-bottom: 35px;
+            }
+        }
+    }
+
+    &__title {
+        font-style: normal;
+        font-weight: 700;
+        color: $color-second;
+        margin-bottom: 15px;
+        width: 85%;
+
+        @include responsive(md) {
+            width: 100%;
+        }
+
+        @include responsive(sm) {
+            font-family: $font-md
+        }
+    }
+
+    &__description {
+        @extend .section-description;
+        margin-bottom: 40px;
+
+        @include responsive(sm) {
+            margin-bottom: 30px;
+        }
+
+        @include responsive(xs) {
+            color: #222
+        }
+    }
+
+
+    &__social-icons {
+        @include flex(flex-start, center, row);
+        gap: 23px;
+    }
+
+    &__social-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: $border-radius-circle;
+        background-color: $color-primary-opacity-15;
+        position: relative;
+        @include flex(center, center, row);
+
+        i {
+            color: $color-primary;
+            font-size: 14px;
+        }
+
+        &__shape {
+            @include flex(center, center, row);
+            position: absolute;
+            bottom: -50px;
+            background-color: #f16214;
+            color: #fff;
+            padding: 7px 12px;
+            font-size: 14px;
+            font-weight: 400;
+            font-family: "ProductSans-Medium", sans-serif;
+            border-radius: 5px;
+            display: none;
+            z-index: 6;
+            @include transition(display, .3s, ease-in);
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 16px;
+                height: 16px;
+                top: -8px;
+                background-color: $color-primary;
+                transform: rotate(45deg);
+                z-index: -1;
+            }
+        }
+
+        &:nth-child(1) &__shape,
+        &:nth-child(1) &__shape::before {
+            background-color: #007cff;
+        }
+
+        &:nth-child(2) &__shape,
+        &:nth-child(2) &__shape::before {
+            background-color: #ff004c;
+        }
+
+        &:nth-child(3) &__shape,
+        &:nth-child(3) &__shape::before {
+            background-color: #0066ff;
+        }
+
+        &:nth-child(4) &__shape,
+        &:nth-child(4) &__shape::before {
+            background-color: #ff5100;
+        }
+
+        &:hover &__shape {
+            display: flex;
+        }
+
+        &:active &__shape {
+            display: flex;
+        }
+    }
+
+    &__imgbox {
+        @include flex(center, flex-start, column);
+        flex: 1;
+
+        img {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: auto;
+            height: 960px;
+            object-fit: cover;
+            animation: animation-for-image 4s cubic-bezier(.45,.05,.55,.95) infinite;
+
+
+            @include responsive(xxl) {
+                width: 70%;
+            }
+
+            @include responsive(xl) {
+                width: 60%;
+            }
+
+            @include responsive(md) {
+                width: 55%;
+                height: 45%;
+                top: 130px;
+            }
+
+            @include responsive(sm) {
+                width: 60%;
+                top: 135px;
+            }
+
+            @include responsive(xs) {
+                width: 80%;
+                height: 40%;
+                top: 90px;
+                opacity: .5;
+            }
+        }
+    }
+
+    &__footer {
+        width: 100%;
+
+        &-cards {
+            @include flex(space-between, center, row);
+            width: 100%;
+            box-shadow: $box-shadow-1;
+            border-radius: $border-radius-60-0;
+            padding: 60px 0;
+
+            @include responsive(sm) {
+                padding: 30px 0 10px 0;
+                flex-wrap: wrap;
+            }
+
+            @include responsive(xs) {
+                padding: 5px 0;
+            }
+
+            @include responsive(xxs) {
+                overflow: hidden;
+                border-radius: 50px 50px;
+                padding: 0;
+            }
+        }
+
+        &-card {
+            @include flex(center, center, column);
+            text-align: center;
+            padding: 0 50px;
+            flex: 1;
+            cursor: pointer;
+
+            &:not(:last-child) {
+                border-right: 2px solid $color-line-1;
+            }
+
+            @include responsive(md) {
+                padding: 0;
+            }
+
+            @include responsive(sm) {
+                flex: 1 1 50%;
+                border-right: none;
+                margin-bottom: 30px;
+                padding: 30px 0;
+                @include transition(background, .4s, cubic-bezier(.22, .61, .36, 1));
+
+                &:nth-child(2),
+                &:nth-child(3) {
+                    border: none;
+                }
+
+                &:first-child {
+                    border-right: 2px solid $color-line-1;
+                }
+
+                &:hover {
+                    background-color: #d8d8d8;
+                }
+            }
+
+            @include responsive(xs) {
+                padding: 25px 10px;
+                margin-bottom: 15px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            &__icon {
+                width: 40px;
+                height: 40px;
+                background-color: $color-primary;
+                @include flex(center, center, row);
+                margin-bottom: 16px;
+                border-radius: $border-radius-circle;
+            }
+
+            &__title {
+                @extend .text-1;
+                color: $color-second;
+                margin-bottom: 6px;
+                font-family: $font-md;
+
+                @include responsive(xxs) {
+                    font-size: 14px;
+                }
+            }
+
+            &__subtitle {
+                font-weight: 400;
+                font-size: 13px;
+                line-height: 16px;
+                color: $color-grey;
+            }
+
+
+        }
+
+    }
+}
+
+// * Work
+.work {
+    width: 100%;
+    padding-top: 140px;
+    position: relative;
+    margin-bottom: 150px;
+
+    @include responsive(xl) {
+        padding-top: 50px;
+    }
+
+    @include responsive(lg) {
+        margin-bottom: 120px;
+    }
+
+    @include responsive(sm) {
+        padding-top: 65px;
+        margin-bottom: 80px;
+    }
+
+    @include responsive(xxs) {
+        margin-bottom: 60px;
+    }
+
+    &__content {
+        width: 100%;
+        @include flex(space-between, center, row);
+
+        @include responsive(sm) {
+            flex-direction: column;
+        }
+    }
+
+    &__imgbox {
+        @include flex(center, center, row);
+        flex: 1;
+
+        img {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 55%;
+            height: 100%;
+            object-fit: cover;
+    animation: animation-for-image 4s cubic-bezier(.45,.05,.55,.95) infinite;
+
+
+            @include responsive(xl) {
+                width: 55%;
+                height: 80%;
+                top: 100px;
+            }
+
+            @include responsive(lg) {
+                width: 52%;
+                height: 90%;
+                top: 40px;
+            }
+
+            @include responsive(md) {
+                width: 50%;
+                height: 60%;
+                top: 90px;
+            }
+
+            @include responsive(sm) {
+                width: 85%;
+                height: 70%;
+                z-index: -1;
+                opacity: .5
+            }
+
+            @include responsive(xs) {
+                width: 100%;
+                height: 65%;
+            }
+        }
+    }
+
+    &__info {
+        @include flex(center, flex-start, column);
+        width: 50%;
+        flex: 1;
+        margin-left: auto;
+        position: relative;
+
+        @include responsive(sm) {
+            width: 100%;
+        }
+    }
+
+    &__suptitle {
+        @extend .section-suptitle;
+        margin-bottom: 6px;
+    }
+
+    &__title {
+        @extend .section-title;
+        margin-bottom: 45px;
+
+        @include responsive(md) {
+            margin-bottom: 20px;
+        }
+
+        @include responsive(xs) {
+            font-weight: 500;
+            line-height: 40px;
+        }
+    }
+
+    &__description {
+        @extend .section-description;
+        margin-bottom: 34px;
+
+        @include responsive(sm) {
+            color: #111;
+        }
+
+        @include responsive(xxs) {
+            margin-bottom: 25px;
+        }
+    }
+
+}
+
+// * Services
+.services {
+    width: 100%;
+    padding-bottom: 100px;
+
+    @include responsive(xs) {
+        padding-bottom: 50px;
+    }
+
+    &__content {
+        width: 100%;
+        @include flex(center, center, column);
+        text-align: center;
+    }
+
+    &__suptitle {
+        @extend .section-suptitle;
+        margin-bottom: 6px;
+    }
+
+    &__title {
+        @extend .section-title;
+        margin-bottom: 60px;
+
+        @include responsive(sm) {
+            margin-bottom: 40px;
+        }
+
+        @include responsive(xs) {
+            font-weight: 500;
+            margin-bottom: 30px;
+            line-height: 40px;
+        }
+
+        @include responsive(xxs) {
+            margin-bottom: 25px;
+        }
+    }
+}
+
+// * Product
+.product {
+    width: 100%;
+    padding-top: 100px;
+    padding-bottom: 80px;
+
+    @include responsive(lg) {
+        padding-top: 40px;
+    }
+
+    @include responsive(md) {
+        padding-bottom: 50px;
+    }
+
+    @include responsive(xs) {
+        padding-top: 20px;
+    }
+
+    @include responsive(xxs) {
+        padding-bottom: 10px;
+    }
+
+    &__content {
+        width: 100%;
+        @include flex(center, center, column);
+        text-align: center;
+    }
+
+    &__suptitle {
+        @extend .section-suptitle;
+        margin-bottom: 6px;
+    }
+
+    &__title {
+        @extend .section-title;
+        margin-bottom: 55px;
+
+        @include responsive(lg) {
+            margin-bottom: 45px;
+        }
+
+        @include responsive(md) {
+            margin-bottom: 30px;
+        }
+
+        @include responsive(xxs) {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+// * Donwload
+.download {
+    width: 100%;
+    padding: 200px 0;
+
+    @include responsive(md) {
+        padding: 40px 0;
+    }
+
+    &__content {
+        width: 100%;
+        position: relative;
+    }
+
+    &__box {
+        width: 100%;
+        background-image: url("/image/download/download-bg.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: $border-radius-60-0;
+        background-blend-mode: color;
+        height: 300px;
+        @include flex(space-between, center, row);
+
+        @include responsive(md) {
+            flex-direction: column;
+            height: auto;
+            padding: 30px 10px 0 10px;
+        }
+
+        @include responsive(sm) {
+            border-radius: 80px 0;
+        }
+
+        @include responsive(xs) {
+            border-radius: 60px;
+        }
+
+        @include responsive(xxs) {
+            border-radius: 35px;
+        }
+    }
+
+    &__info {
+        padding: 0 30px;
+        @include flex(center, flex-start, column);
+
+        @include responsive(sm) {
+            width: 100%;
+        }
+
+        @include responsive(xxs) {
+            padding: 0 20px;
+        }
+    }
+
+    &__title {
+        @extend .section-title;
+        color: #fff;
+        margin-bottom: 30px;
+        width: 65%;
+
+        @include responsive(lg) {
+            width: 82%;
+        }
+
+        @include responsive(md) {
+            width: 100%;
+        }
+
+        @include responsive(xs) {
+            margin-bottom: 20px;
+        }
+
+        @include responsive(xxs) {
+            font-size: 22px;
+            line-height: 130%;
+        }
+    }
+
+    &__apps {
+        @include flex(space-between, center, row);
+        gap: 20px;
+
+        @include responsive(xs) {
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+    }
+
+    &__app {
+        @include flex(space-between, center, row);
+        padding: 14px 20px;
+        background-color: #fff;
+        border-radius: $border-radius-13;
+        gap: 15px;
+        cursor: pointer;
+        transition: .3s ease;
+
+        @include responsive(xs) {
+            padding: 10px 20px;
+        }
+
+        @include responsive(xxs) {
+            padding: 10px 15px;
+
+            img {
+                width: 30px;
+                height: 30px;
+            }
+        }
+        &:hover{
+            background-color: #0093ff;
+            color: #fff;
+        }
+        &-text {
+            @include flex(center, flex-start, column);
+
+            span {
+                font-style: normal;
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 13px;
+                font-family: $font-rg;
+            }
+
+            h3 {
+                font-family: $font-md;
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 25px;
+            }
+        }
+    }
+
+    &__imgboxs {
+        @include flex(center, center, row);
+    }
+
+    &__imgbox {
+        width: 280px;
+        height: 600px;
+
+        &:last-child {
+            transform: translateY(40px);
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @include responsive(lg) {
+            width: auto;
+            height: 550px;
+
+            &:last-child {
+                transform: translateY(35px);
+            }
+        }
+
+        @include responsive(md) {
+            height: auto;
+
+            img {
+                object-fit: contain;
+            }
+
+            &:last-child {
+                transform: none;
+            }
+        }
+
+        @include responsive(sm) {
+            height: 400px;
+        }
+
+        @include responsive(xs) {
+            height: 300px;
+        }
+
+        @include responsive(xxs) {
+            img {
+                transform: scale(1.2);
+            }
+        }
+    }
+}
+
+// * Review
+.review {
+    width: 100%;
+    position: relative;
+    padding: 80px 0;
+
+    @include responsive(sm) {
+        padding: 30px 0;
+    }
+
+    &__content {
+        width: 100%;
+        @include flex(space-between, center, column);
+    }
+
+    &__suptitle {
+        @extend .section-suptitle;
+        margin-bottom: 6px;
+    }
+
+    &__title {
+        @extend .section-title;
+        margin-bottom: 25px;
+    }
+
+    &__main {
+        width: 100%;
+        @include flex(space-between, center, row);
+
+        @include responsive(sm) {
+            flex-direction: column;
+        }
+
+
+
+        &-info {
+            @include flex(center, center, column);
+            text-align: center;
+            flex: 1;
+
+            &__body {
+                @include flex(center, center, column);
+                text-align: center;
+
+                &.effect {
+                    animation: effect-for-slide 1.5s linear forwards;
+                }
+
+            }
+
+            @include responsive(xxs) {
+                margin-bottom: 20px;
+            }
+
+            &__imgbox {
+                @include flex(center, center, row);
+                margin-bottom: 50px;
+                gap: 15px;
+
+                @include responsive(sm) {
+                    margin-bottom: 30px;
+                }
+
+                @include responsive(xs) {
+                    margin-bottom: 20px;
+                }
+
+                img {
+                    width: 80px;
+                    height: 80px;
+                    object-fit: cover;
+                    border-radius: $border-radius-circle;
+
+                    @include responsive(xxs) {
+                        width: 60px;
+                        height: 60px;
+                    }
+                }
+
+                &-text {
+                    @include flex(flex-start, center, column);
+                    text-align: start;
+
+                    h3 {
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 18px;
+                        line-height: 19px;
+                        font-family: $font-bl;
+                        margin-bottom: 3px;
+
+                        @include responsive(xxs) {
+                            font-family: $font-md
+                        }
+                    }
+
+                    span {
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 16px;
+                        font-family: $font-md;
+                        color: $color-grey;
+
+                    }
+                }
+            }
+
+            &__description {
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 160%;
+                color: $color-grey;
+                width: 90%;
+                margin-bottom: 34px;
+
+                @include responsive(xs) {
+                    width: 100%;
+                    color: #222;
+                }
+            }
+
+            &__footer {
+                @include flex(center, center, row);
+                gap: 30px;
+
+                &-icon {
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 10px;
+                    @include flex(center, center, row);
+                    cursor: pointer;
+                    transition: backgroundColor .3s ease;
+
+                    svg,
+                    svg path,
+                    svg line {
+                        @include transition(all, .3s, ease)
+                    }
+
+                    &:nth-child(1) {
+                        background-color: #fff;
+                        border: 1.5px solid #EEEEEE;
+                    }
+
+                    &:nth-child(2) {
+                        border: 1.5px solid $color-primary;
+                        background-color: $color-primary;
+                    }
+
+                    &:hover {
+                        background-color: $color-primary;
+
+                        svg path,
+                        svg line {
+                            fill: #fff;
+                            stroke: #fff;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        &-imgbox {
+            @include flex(center, center, row);
+            flex: 1;
+        }
+    }
+
+    &__left-image {
+        position: absolute;
+        top: 35px;
+        left: 0;
+        width: 370px;
+        height: 370px;
+        object-fit: cover;
+
+        @include responsive(xl) {
+            width: 300px;
+            height: 300px;
+        }
+
+        @include responsive(lg) {
+            width: 250px;
+            height: 250px;
+        }
+
+        @include responsive(md) {
+            height: 300px;
+            width: 300px;
+            top: 5%;
+            z-index: -1;
+            opacity: .5;
+        }
+    }
+}
+
+// * Subscribe
+.subscribe {
+    width: 100%;
+    padding: 100px 0;
+
+    @include responsive(md) {
+        padding: 60px 0;
+    }
+
+    @include responsive(xxs) {
+        padding: 40px 0;
+    }
+
+
+    &__box {
+        background-image: url("/image/download/download-bg.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 300px;
+        border-radius: $border-radius-60-0;
+        gap: 20px;
+        @include flex(space-between, center, row);
+
+        @include responsive(lg) {
+            height: auto;
+        }
+
+        @include responsive(md) {
+            padding: 20px 0;
+        }
+
+        @include responsive(sm) {
+            padding: 30px;
+            flex-direction: column-reverse;
+        }
+
+        @include responsive(xs) {
+            padding-right: 20px;
+        }
+
+        @include responsive(xxs) {
+            border-radius: 60px;
+        }
+
+    }
+
+    &__imgbox {
+        flex: 1;
+
+        img {
+            width: auto;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        @include responsive(sm) {
+            height: 280px;
+        }
+
+    }
+
+    &__info {
+        flex: 1;
+        @include flex(center, flex-start, column);
+        padding-right: 70px;
+
+        @include responsive(lg) {
+            padding-right: 20px;
+        }
+
+        @include responsive(xs) {
+            padding-right: 0;
+        }
+    }
+
+    &__title {
+        @extend .section-title;
+        margin-bottom: 15px;
+        color: #fff;
+
+        @include responsive(xs) {
+            margin-bottom: 10px;
+        }
+
+        @media(max-width:450px) {
+            line-height: 150%;
+        }
+    }
+
+    &__description {
+        @extend .section-description;
+        margin-bottom: 30px;
+    }
+
+}
+
+// * Animation Effect
+@keyframes effect-for-slide {
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: .1
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+
+    75% {
+        opacity: .7;
+    }
+
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes animation-for-image {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(40px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}

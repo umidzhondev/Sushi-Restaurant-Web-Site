@@ -1,0 +1,50 @@
+.nav {
+    @include flex(space-between, center, row);
+
+    @include responsive(sm) {
+        height: 50%;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    &__item {
+        margin: 0 24px;
+
+        @include responsive(md) {
+            margin: 0 22px;
+        }
+
+        @media(max-width:850px) {
+            margin: 0 15px;
+        }
+    }
+
+    &__link {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        font-family: $font-md;
+        color: $color-second;
+        @include transition(color, .3s, ease);
+
+        &--active {
+            color: $color-primary;
+        }
+
+        &:hover {
+            color: $color-primary;
+        }
+
+        @include responsive(sm) {
+            font-size: 2rem;
+        }
+        @include responsive(xs) {
+         font-size: 1.8rem;       
+        }
+        @include responsive(xxs){
+         font-size: 1.6rem;       
+        }
+    }
+
+}

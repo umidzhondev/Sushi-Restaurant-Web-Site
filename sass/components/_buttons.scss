@@ -1,0 +1,142 @@
+.button {
+    background-color: $color-primary;
+    color: #fff;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    border-radius: 54px;
+
+    &__navbar {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 16px;
+        color: #fff;
+        background-color: $color-primary;
+        padding: 7px 15px;
+
+        @include responsive(sm) {
+            padding: 20px 50px;
+            font-size: 1.6rem;
+        }
+
+        @include responsive(xs) {
+            font-size: 1.4rem;
+            padding: 18px 50px;
+        }
+
+        @include responsive(xxs) {
+            font-size: 1.2rem;
+            padding: 16px 50px;
+        }
+    }
+
+    &__main {
+        @include flex(space-between, center, row);
+        line-height: 150%;
+        font-family: $font-md;
+        border: 2px solid $color-primary;
+        padding: 8px 5px 8px 20px;
+        @extend .button-text;
+        @include transition(all, .4s, ease-in);
+
+        &-icon {
+            margin-left: 20px;
+            @include flex(center, center, row);
+            width: 40px;
+            height: 40px;
+            background-color: #fff;
+            border-radius: $border-radius-circle;
+            @include transition(transform, .4s, ease);
+        }
+
+        &:hover {
+            background-color: #fff;
+            color: $color-primary;
+        }
+
+        &:hover &-icon {
+            background-color: $color-primary;
+
+            svg path {
+                fill: #fff;
+            }
+
+            transform: translateX(20px) scale(1.2);
+        }
+
+        @include responsive(xs) {
+            padding: 3px 5px 3px 15px;
+        }
+    }
+
+    &__product {
+        padding: 12px 25px;
+        font-size: 14px;
+        font-weight: 500;
+        font-family: $font-md;
+        @include transition(transform, .3s, linear);
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        @include responsive(md) {
+            padding: 10px 20px;
+        }
+
+        @include responsive(xs) {
+            padding: 10px 15px;
+            text-replace: scale(1.05);
+        }
+
+        @media (max-width:450px) {
+            padding: 12px 25px;
+        }
+
+        @include responsive(xxs) {
+            padding: 11px 22px;
+        }
+    }
+
+    &__subscribe {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 150%;
+        text-transform: uppercase;
+        color: #fff;
+        border-radius: $border-radius-13;
+        padding: 13px 22px;
+        background-color: $color-primary;
+        font-family: $font-md;
+        position: absolute;
+        right: 5px;
+        @include responsive(xs){
+        padding: 13px 20px;
+        font-size: 14px;
+        }
+        @media(max-width:450px){
+         position: static;
+         width: 100%;
+         padding: 13px 20px;   
+        }
+    }
+    &__footer{
+        width: 40px;
+        height: 40px;
+        border-radius: $border-radius-10;
+        background-color: $color-primary;
+        color: #fff;
+        transition: transform .3s linear;
+        @include flex(center,center,row);
+        @include responsive(sm){
+            width: 34px;
+        }
+        @include responsive(xs){
+            width: 35px;
+        }
+        &:hover{
+            transform: scale(1.1);
+        }
+    }
+}

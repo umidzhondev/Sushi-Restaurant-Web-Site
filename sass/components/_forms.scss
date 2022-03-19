@@ -1,0 +1,80 @@
+// * Subscribe
+.subscribe {
+    &__form {
+        position: relative;
+        @include flex(center, center, row);
+        border-radius: $border-radius-13;
+        overflow: hidden;
+        width: 90%;
+        margin-right: auto;
+
+        input {
+            border-radius: $border-radius-13;
+            outline: none;
+            border: none;
+            width: 100%;
+            padding: 20px 5px 20px 20px;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 150%;
+            font-family: $font-md;
+
+            @include responsive(xs) {
+                padding: 16px 5px 16px 20px;
+            }
+            @include responsive(xxs) {
+                padding: 12px 5px 12px 20px;
+                font-size: 15px;
+            }
+        }
+
+        @include responsive(xs) {
+            width: 100%;
+        }
+
+        @media(max-width:450px) {
+            flex-direction: column;
+            gap: 15px;
+        }
+
+
+    }
+}
+
+// * Footer
+.footer{
+    &__form {
+        width: 270px;
+        position: relative;
+        margin-top: 20px;
+        @include flex(center, center, row);
+
+        input {
+            width: 100%;
+            padding: 12px 20px;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 200%;
+            color: $color-second;
+            border: none;
+            outline: none;
+            font-family: $font-rg;
+            border-radius: $border-radius-10;
+            border: 1px solid transparent;
+            &:focus{
+                border: 1px solid $color-primary;
+            }
+        }
+        @include responsive(md){
+            width: 260px;
+        }
+        @include responsive(sm){
+          width: 90%;
+        }
+        @include responsive(sm){
+          width: 100%;
+        }
+        
+    }
+}

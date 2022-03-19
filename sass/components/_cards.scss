@@ -1,0 +1,286 @@
+// * Services
+.services {
+    &__cards {
+        width: 100%;
+        @include flex(space-between, center, row);
+        gap: 30px;
+
+        @include responsive(lg) {
+            gap: 20px;
+        }
+
+        @media(max-width:850px) {
+            flex-wrap: wrap;
+        }
+    }
+
+    &__card {
+        @include flex(center, center, column);
+        text-align: center;
+        flex: 1;
+        border-radius: $border-radius-60-0;
+        box-shadow: $box-shadow-3;
+        padding: 70px 20px;
+        border: 2px solid #EEEEEE;
+        box-sizing: border-box;
+        @include transition(all, .4s, ease-in-out);
+        cursor: pointer;
+
+        @include responsive(lg) {
+            padding: 60px 10px;
+        }
+
+        @include responsive(md) {
+            padding: 50px 10px;
+        }
+
+        @media (max-width: 850px) {
+            flex: 1 1 45%;
+        }
+
+        @include responsive(xs) {
+            flex: 1 1 100%;
+            padding: 40px 10px;
+        }
+
+        @include responsive(xxs) {
+            padding: 30px 10px;
+        }
+
+        &-imgbox {
+            width: 80px;
+            height: 80px;
+            background-color: $color-primary-opacity-15;
+            border-radius: $border-radius-circle;
+            margin-bottom: 45px;
+            @include flex(center, center, row);
+            @include transition(all, .3s, ease-in-out);
+
+            @include responsive(sm) {
+                width: 70px;
+                height: 70px;
+                margin-bottom: 35px;
+            }
+
+            @include responsive(xs) {
+                margin-bottom: 30px;
+            }
+
+            @include responsive(xxs) {
+                width: 65px;
+                height: 65px;
+                margin-bottom: 25px;
+
+                svg {
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+        }
+
+        &-title {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 26px;
+            line-height: 32px;
+            font-family: $font-md;
+            margin-bottom: 22px;
+            @include transition(all, .3s, ease-in-out);
+
+            @include responsive(sm) {
+                font-size: 24px;
+            }
+
+            @include responsive(xxs) {
+                font-size: 22px;
+                margin-bottom: 10px;
+            }
+        }
+
+        &-description {
+            @extend .section-description;
+            line-height: 160%;
+            width: 85%;
+            @include transition(all, .3s, ease-in-out);
+
+        }
+
+        &:hover {
+            background-color: $color-primary;
+            color: #fff;
+        }
+
+        &:hover &-imgbox {
+            background-color: #fff;
+        }
+
+        &:hover &-title,
+        &:hover &-description {
+            color: #fff;
+        }
+
+    }
+}
+
+// * Product
+.product {
+    &__cards {
+        width: 100%;
+        @include flex(center, center, row);
+        flex-wrap: wrap;
+        gap: 25px;
+        margin-bottom: 60px;
+
+        @include responsive(lg) {
+            margin-bottom: 50px;
+        }
+
+        @include responsive(xs) {
+            gap: 25px 15px;
+            margin-bottom: 40px;
+        }
+
+        @include responsive(xxs) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__card {
+        @include flex(flex-start, center, column);
+        flex: 1 1 calc(100%/4);
+        border-radius: $border-radius-50-0;
+        box-shadow: $box-shadow-2;
+        overflow: hidden;
+        padding-bottom: 50px;
+
+        @include responsive(lg) {
+            padding-bottom: 40px;
+        }
+
+        @include responsive(md) {
+            padding-bottom: 30px;
+        }
+
+        @include responsive(md) {
+            flex: 1 1 25%;
+        }
+
+        @include responsive(sm) {
+            flex: 1 1 40%;
+        }
+
+        @include responsive(xs) {
+            text-align: start;
+            border-radius: 40px 0;
+        }
+
+        @media (max-width:450px) {
+            flex: 1 1 60%;
+        }
+
+        @include responsive(xxs) {
+            padding-bottom: 25px;
+        }
+
+        &-imgbox {
+            width: 100%;
+            height: 290px;
+            margin-bottom: 16px;
+            overflow: hidden;
+            cursor: pointer;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: .3s linear;
+
+                @include responsive(lg) {
+                    object-position: right;
+                }
+            }
+
+            &:hover img {
+                transform: scale(1.2);
+            }
+
+            @include responsive(lg) {
+                height: 250px;
+            }
+
+            @include responsive(md) {
+                height: 230px;
+            }
+
+            @include responsive(xs) {
+                height: 210px;
+
+                &:hover img {
+                    transform: scale(1.1);
+                }
+            }
+
+            @media (max-width:450px) {
+                height: 240px;
+            }
+
+            @include responsive(xxs) {
+                height: 220px;
+            }
+        }
+
+        &-body {
+            width: 100%;
+            @include flex(space-between, center, row);
+            padding: 0 20px;
+
+            @include responsive(md) {
+                padding: 0 15px;
+            }
+
+            @include responsive(xs) {
+                padding: 0 8px;
+            }
+
+            @media (max-width:450px) {
+                padding: 0 20px;
+            }
+        }
+
+        &-left {
+            @include flex(center, flex-start, column);
+        }
+
+        &-title {
+            @extend .card-title;
+            margin-bottom: 20px;
+        }
+
+        &-right {
+            @include flex(center, flex-end, column);
+        }
+
+        &-rating {
+            @include flex(center, center, row);
+            margin-bottom: 16px;
+            gap: 5px;
+
+            svg {
+                width: 15px;
+                height: 15px;
+            }
+
+            span {
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 16px;
+                font-family: $font-md;
+                color: $color-second;
+            }
+        }
+
+        &-price {
+            @extend .card-title;
+        }
+    }
+}
